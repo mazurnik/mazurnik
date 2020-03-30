@@ -25,6 +25,7 @@
     "gulp-sass": "^4.0.2"
   },
   "dependencies": {
-    "gulp-clean-css": "^4.3.0"
+    "gulp-clean-css": "^4.3.0",
+    "normalize.css": "^8.0.1"
   }
 }
