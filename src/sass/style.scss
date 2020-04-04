@@ -4,8 +4,12 @@
     font-family: 'Museo Sans Cyrl', sans-serif;
 }
 
-.header {
-    height: 650px;
-    width: 100%;
-    background-image: url(../img/bg1.jpg);
+.container {
+    max-width: 950px;
+    margin: 0 auto;
+    // background: #000;
 }
+
+@import 'blocks/promo';
+@import 'blocks/header';
+@import 'blocks/buttons';
