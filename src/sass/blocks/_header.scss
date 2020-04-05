@@ -3,6 +3,16 @@
     justify-content: space-between;
     align-items: center;
 
+    @media (max-width: 375px) {
+
+        flex-direction: column;
+
+        &__logo {
+            margin-bottom: 10px;
+        }
+
+    }
+
     &__logo {
         width: 250px;
 
@@ -10,6 +20,7 @@
             width: 100%;
         }
     }
+
 
 
     .header__descr {
@@ -22,6 +33,10 @@
             display: block;
             font-size: 18px;
 
+        }
+
+        @media (max-width: 620px) {
+            display: none;
         }
     }
 
@@ -41,6 +56,12 @@
             color: #fff;
             text-decoration: none;
         }
+
+        @media (max-width: 620px) {
+            font-size: 12px;
+        }
+
+
     }
 
 

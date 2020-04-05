@@ -10,6 +10,20 @@
     // background: #000;
 }
 
+@media (max-width: 950px) {
+    .container {
+        max-width: 750px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: none;
+    }
+}
+
+@media (max-width: 620px) {}
+
 @import 'blocks/promo';
 @import 'blocks/header';
 @import 'blocks/buttons';

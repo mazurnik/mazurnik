@@ -15,6 +15,14 @@
         font-size: 42px;
         font-weight: 700;
         text-transform: uppercase;
+
+        @media (max-width: 620px) {
+            font-size: 32px;
+
+            .container {
+                padding: 0 20px 0 20px;
+            }
+        }
     }
 
     .promo__subheader {
@@ -22,6 +30,10 @@
         font-size: 24px;
         font-weight: 500;
         text-transform: uppercase;
+
+        @media (max-width: 620px) {
+            font-size: 16px;
+        }
     }
 
     .promo__icons {
