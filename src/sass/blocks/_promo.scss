@@ -8,6 +8,10 @@
         flex-direction: column;
         align-items: flex-end;
         margin-top: 90px;
+
+        @media (max-width: 430px) {
+            align-items: center;
+        }
     }
 
     .promo__header {
@@ -18,10 +22,11 @@
 
         @media (max-width: 620px) {
             font-size: 32px;
+            text-align: center;
 
-            .container {
-                padding: 0 20px 0 20px;
-            }
+            // .container {
+            //     padding: 0 20px 0 20px;
+            // }
         }
     }
 
@@ -34,6 +39,11 @@
         @media (max-width: 620px) {
             font-size: 16px;
         }
+
+        @media (max-width: 430px) {
+            font-size: 16px;
+            text-align: center;
+        }
     }
 
     .promo__icons {
@@ -41,6 +51,12 @@
         margin-top: 65px;
         width: 425px;
         justify-content: space-between;
+
+        @media (max-width: 430px) {
+            display: flex;
+            flex-direction: column;
+
+        }
     }
 
     .promo__icon {
@@ -52,11 +68,18 @@
         font-weight: 500;
         margin: 0 auto;
 
-        img {
-            display: block;
-            margin: 0 auto;
+        @media (max-width: 430px) {
+
             margin-bottom: 20px;
         }
+
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+
     }
 
     &__link {
