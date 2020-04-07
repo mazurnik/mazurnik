@@ -18,14 +18,17 @@
 
 @media (max-width: 767px) {
     .container {
-        max-width: none;
+        max-width: 650;
         padding: 0 20px;
     }
 }
 
-@media (max-width: 620px) {}
+// @media (max-width: 620px) {}
 
 @import 'blocks/promo';
 @import 'blocks/header';
 @import 'blocks/buttons';
 @import 'blocks/adv';
+@import 'blocks/consultation';
+@import 'blocks/titles';
+@import 'blocks/forms';

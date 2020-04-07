@@ -15,6 +15,10 @@
         img {
             width: 100%;
         }
+
+        @media (max-width: 620px) {
+            display: none;
+        }
     }
 
 
@@ -31,9 +35,9 @@
 
         }
 
-        @media (max-width: 620px) {
-            display: none;
-        }
+        // @media (max-width: 620px) {
+        //     display: none;
+        // }
     }
 
     .header__contacts {
