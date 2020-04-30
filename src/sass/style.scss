@@ -2,6 +2,7 @@
 
 * {
     font-family: 'Museo Sans Cyrl', sans-serif;
+    // box-sizing: border-box;
 }
 
 .container {
@@ -33,3 +34,4 @@
 @import 'blocks/titles';
 @import 'blocks/forms';
 @import 'blocks/slider';
+@import 'blocks/catalog';
