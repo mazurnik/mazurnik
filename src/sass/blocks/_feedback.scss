@@ -11,6 +11,10 @@ h2 {
     display: flex;
     margin: 70px 0px 50px;
     border-bottom: solid 1px #f6f6f6;
+
+    &:last-child {
+        border-bottom: none;
+    }
 }
 
 .feedback__wrap {
