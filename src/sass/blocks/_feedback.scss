@@ -1,0 +1,47 @@
+h2 {
+    color: #0d0d0d;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.feedback__item {
+    display: flex;
+    margin: 70px 0px 50px;
+    border-bottom: solid 1px #f6f6f6;
+}
+
+.feedback__wrap {
+
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback__avatar {
+    width: 169px;
+    height: 169px;
+    margin-right: 60px;
+}
+
+.feedback__name {
+    color: #0d0d0d;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.feedback__record {
+    color: #646464;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.feedback__text {
+    max-width: 658px;
+    color: #0d0d0d;
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 19px;
+    margin-bottom: 48px;
+}
