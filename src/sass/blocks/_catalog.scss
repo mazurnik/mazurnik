@@ -34,7 +34,8 @@
     }
 
     div {
-        transform: skewX(25deg)
+        transform: skewX(25deg);
+        line-height: 45px;
     }
 
     &.active {
@@ -89,6 +90,8 @@
         font-size: 14px;
         font-weight: 300;
         text-align: center;
+        max-width: 255px;
+        // margin-right: 20px;
     }
 
     &-link {
@@ -142,10 +145,12 @@
         width: 50%;
         margin-right: 0px;
         transform: translateX(-100%);
+        transition: 0s;
 
         &.active {
             transform: translateX(0%);
             margin-right: 20px;
+            transition: 0s;
         }
     }
 
@@ -158,10 +163,12 @@
         padding-left: 19px;
         margin-bottom: 0;
         list-style-type: none;
+        transition: 0s;
 
         &.active {
             transform: translateX(-100%);
-            margin-right: 0px;
+            margin-left: 0px;
+            transition: 0s;
         }
 
         li {
