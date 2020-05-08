@@ -39,12 +39,9 @@ $(document).ready(function () {
   $('.modal__close').on('click', function () {
     $('.shadow, #consultation, #order, #thanks').fadeOut('slow');
   });
-  // $('.button__mini').on('click', function () {
-  //   $('.shadow, #order').fadeIn('slow');
-  // });
   $('.button__mini').each(function (i) {
     $(this).on('click', function () {
-      $('#order .modal_subtitle').text($('.catalog__item-subtitle').eq(i).text());
+      $('#order, modal_subtitle').text($('.catalog__item-subtitle').eq(i).text());
       $('.shadow, #order').fadeIn('slow');
     })
   });
