@@ -2,7 +2,8 @@ $(document).ready(function () {
   $(".slider__inner").slick({
     speed: 700,
     // autoplay: true,
-    prevArrow: '<img class ="slick-prev" src = "../img/icons/prev.svg" alt="slide">',
+    prevArrow:
+      '<img class ="slick-prev" src = "../img/icons/prev.svg" alt="slide">',
     nextArrow: '<img class="slick-next" src="../img/icons/next.svg">',
   });
 
@@ -33,16 +34,56 @@ $(document).ready(function () {
     });
   });
   //формы
-  $('[data-modal=consultation]').on('click', function () {
-    $('.shadow, #consultation').fadeIn('slow');
+  $("[data-modal=consultation]").on("click", function () {
+    $(".shadow, #consultation").fadeIn("slow");
   });
-  $('.modal__close').on('click', function () {
-    $('.shadow, #consultation, #order, #thanks').fadeOut('slow');
+  $(".modal__close").on("click", function () {
+    $(".shadow, #consultation, #thanks, #order").fadeOut("slow");
   });
-  $('.button__mini').each(function (i) {
-    $(this).on('click', function () {
-      $('#order, modal_subtitle').text($('.catalog__item-subtitle').eq(i).text());
-      $('.shadow, #order').fadeIn('slow');
-    })
+
+  $(".button__mini").each(function (i) {
+    $(this).on("click", function () {
+      $("#order .modal__subtitle").text(
+        $(".catalog__item-subtitle").eq(i).text()
+      );
+      $(".shadow, #order").fadeIn("slow");
+    });
   });
-})
+  //validate
+
+  function valideForms(form) {
+    $(form).validate({
+      rules: {
+        name: {
+          required: true,
+          minlength: 2,
+        },
+        phone: {
+          required: true,
+          phone: true,
+        },
+        email: {
+          required: true,
+          email: true,
+        },
+      },
+      messages: {
+        name: {
+          required: "Пожалуйста, введите своё имя",
+          minlength: jQuery.validator.format("Введите {0} символа!"),
+        },
+
+        phone: "Пожалуйста, введите свой телефон",
+
+        email: {
+          required: "Пожалуйста, введите свою почту",
+          email: "Неправильно введен адрес почты",
+        },
+      },
+    });
+  }
+
+  valideForms("#consultation-form");
+  valideForms("#consultation form");
+  valideForms("#order form");
+});
