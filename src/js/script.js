@@ -2,9 +2,8 @@ $(document).ready(function () {
   $(".slider__inner").slick({
     speed: 700,
     // autoplay: true,
-    prevArrow:
-      '<img class ="slick-prev" src = "../img/icons/prev.svg" alt="slide">',
-    nextArrow: '<img class="slick-next" src="../img/icons/next.svg">',
+    prevArrow: '<img class ="slick-prev" src="img/icons/prev.svg" alt="slide">',
+    nextArrow: '<img class="slick-next" src="img/icons/next.svg">',
   });
 
   $("ul.catalog__tabs").on("click", "li:not(.active)", function () {
@@ -86,4 +85,22 @@ $(document).ready(function () {
   valideForms("#consultation-form");
   valideForms("#consultation form");
   valideForms("#order form");
+
+  // отправка почты на сервер
+
+  $("form").submit(function (e) {
+    e.preventDefault();
+    $.ajax({
+      type: "POST",
+      url: "mailer/smart.php",
+      data: $(this).serialize(),
+    }).done(function () {
+      $(this).find("input").val("");
+      $("#consultation, #order").fadeOut();
+      $(".shadow, #thanks").fadeIn("slow");
+
+      $("form").trigger("reset");
+    });
+    return false;
+  });
 });
